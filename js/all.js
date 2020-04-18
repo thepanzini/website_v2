@@ -19651,17 +19651,38 @@ app.contact = {
                 alertify.error(msg1);
             } else {
                 alertify.log(msg2);
-                $.post(path + "mail.php", $("#contact").serialize(), function (data) {
-                    if (data == '11') {
+                // $.post(path + "mail.php", $("#contact").serialize(), function (data) {
+
+                $.ajax({
+                    url: "https://formspree.io/moqnoayw",
+                    method: "POST",
+                    data: $("#contact").serialize(),
+                    dataType: "json",
+                    success: function (data) {
+                        console.log(data)
                         alertify.success(msg3);
                         $('.contact-form .required').removeClass('required');
                         $('.contact-form input[type="text"],.contact-form input[type="email"],.contact-form textarea').val('');
-                    } else {
+
+                    },
+                    error: function (err) {
+                        console.log(err)
                         $('.contact-form .required').removeClass('required');
                         $('.contact-form input[type="text"],.contact-form input[type="email"],.contact-form textarea').val('');
                         alertify.error(msg4);
                     }
                 });
+                // $.post(path + "mail.php", $("#contact").serialize(), function (data) {
+                //     if (data == '11') {
+                //         alertify.success(msg3);
+                //         $('.contact-form .required').removeClass('required');
+                //         $('.contact-form input[type="text"],.contact-form input[type="email"],.contact-form textarea').val('');
+                //     } else {
+                //         $('.contact-form .required').removeClass('required');
+                //         $('.contact-form input[type="text"],.contact-form input[type="email"],.contact-form textarea').val('');
+                //         alertify.error(msg4);
+                //     }
+                // });
             }
             return false;
         });

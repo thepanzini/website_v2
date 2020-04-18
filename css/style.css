@@ -3151,7 +3151,7 @@ a img.aligncenter {
     width: 100%;
     height: 100%;
     z-index: 9;
-    background: url(//jacekjeznach.com/wp-content/themes/jj/css/../img/circle.png) no-repeat center;
+    background: url("/img/circle.png") no-repeat center;
     opacity: 0;
     -webkit-transition: all .15s ease-out;
     -moz-transition: all .15s ease-out;
@@ -8359,14 +8359,14 @@ input:focus:-ms-input-placeholder {
 }
 
 .map-wrap {
-    background: rgba(8, 253, 216, .1);
+    background-image: url("/img/map.png");
     float: right;
     width: 53%;
     height: 115%;
     margin-top: -3%
 }
 
-#map {
+.map {    
     position: relative;
     width: 100%;
     height: 100%;
@@ -9356,7 +9356,8 @@ only screen and (min-device-pixel-ratio:1.5) {
         width: 80%;
         margin-left: 10%;
         height: 320px;
-        clear: both
+        clear: both;
+        background-position: center;
     }
     .inf-map {
         top: auto;
