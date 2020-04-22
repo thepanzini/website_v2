@@ -3222,7 +3222,12 @@ a img.aligncenter {
     margin-bottom: -26px !important
 }
 
-#cboxTitle a {
+.cboxTitle{
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+#cboxTitle a, .cboxTitle {
     color: #7df9ff;
     display: block;
     background: #252627;
@@ -3341,7 +3346,7 @@ a img.aligncenter {
 }
 
 #cboxLoadedContent {
-    margin-bottom: 28px
+    margin-bottom: 28px;
 }
 
 #cboxTitle {
