@@ -1,0 +1,48 @@
+<style>
+    .white-box {
+        width: 100%;
+        background-color: #FFFFFF;
+        padding: 50px;
+        height: 800px;
+    }
+
+    .width-n-position {
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .top-img {
+        height: 550px;
+        display: block;
+        border-radius: 5px 5px 0 0;
+    }
+
+    .text-style {
+        margin-top: 30px;
+        text-align: center;
+        font-size: 16px;
+        line-height: 23px;
+        font-family: "Open Sans", sans-serif;
+        font-weight: 300;
+    }
+
+    .small-style {
+        font-size: 11px;
+    }
+</style>
+
+<div class="white-box">
+    <img src="img/md-python.jpg" class="top-img width-n-position"/>
+    <p class="small-style width-n-position">An example of python code used to develop the linux services.</p>
+    <p class="text-style width-n-position">
+        I was responsible for implementing many linux backend services written in python that subscribed to the
+        topics
+        and manipulated the SQLITE databases to update, insert, delete, or upsert data. One such service was created
+        to
+        monitor and configure the underlying linux network manager through DBUS. A major service also uses queues,
+        and
+        multithreading to handle new incoming requests while composing and sending emails that contain HTML template
+        bodies translated via gettext to supported languages with attachments in text, pdf or zip form.
+    </p>
+</div>
