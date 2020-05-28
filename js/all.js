@@ -19521,6 +19521,18 @@ var _gsScope = "undefined" != typeof module && module.exports && "undefined" != 
 
 // app
 
+var requested = "";
+var errmsg = '<div class="error-info animated fadeInUp"> <span><span>O</span>ops!</span> <p>Something went wrong, please refresh the page or try again later.</p> </div>'
+var msg1 = "Please fill in all required fields";
+var msg2 = "Please wait. Processing";
+var msg3 = "Your e-mail has been successfully sent. Thank You!";
+var msg4 = "Failed to send your message. Please try later or contact me directly the.panzini@gmail.com.";
+var portfolio_design_note = "Please note these are not my designs.";
+var portfolio_privacy_note = "For privacy reasons I'm using similar examples.";
+var portfolio_code_note = "I developed the code.";
+var msg8 = "Scroll to zoom in/out";
+var msg9 = "It's a spam. Your IP has been registered";
+
 app.home = {
     init: function () {
         TweenMax.to(document.querySelector('.bg'), 0.4, {
@@ -19704,7 +19716,6 @@ function validateEmail(email) {
 
 app.gallery = {
     init: function () {
-        var testid = "";
         $("body").addClass('no-overflow');
         $(".magicwall").magicWall({
             maxItemHeight: 1000,
@@ -19728,11 +19739,15 @@ app.gallery = {
             }
         });
 
-        alertify.log(msg5);
+        alertify.log(portfolio_design_note);
 
         setTimeout(function () {
-            alertify.log(msg6);
+            alertify.log(portfolio_privacy_note);
         }, 2000);
+
+        setTimeout(function () {
+            alertify.log(portfolio_code_note);
+        }, 4000);
     }
 };
 app.skills = {
